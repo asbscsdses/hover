@@ -75,17 +75,25 @@
 
 .content2 div{
 	padding:10px;
-	border-style:solid;
-	border-width:1px;
 	margin:2px;	
 }
 
-.content2 a:hover .content2 img{
+
+.visibleImg{
+	display:none;
+	margin-left:15px;
+}
+
+.menuDiv:hover .visibleImg{
 	display:inline-block;
 }
 
 .bdr{
 	border-style:dotted;
+}
+.bdr2{
+	border-style:solid;
+	border-width:1px;
 }
 #bottomDiv{
 	height:300px;
@@ -112,18 +120,10 @@
 	<div class="bdr" id="bottomDiv">
 	</div>
 </div>
-<div class="content2 bdr" id="menuDiv">
-	<div><a href="#">Link 1</a>	<a href="#"><img src="./image/visible.png" title="显示集中器"/></a></div>
-	<div><a href="#">Link 2</a><img src="./image/visible.png" title="显示集中器"/></div>
-	<div><a href="#">Link 3</a><img src="./image/visible.png" title="显示集中器"/></div>
+<div class="content2 bdr">
+	<div class="bdr2 menuDiv"><a href="javascript:;" onclick="alert('xixi');">Link 1</a><a href="javascript:;" onclick="alert('hh');"><img class="visibleImg" src="./image/visible.png" title="显示集中器"/></a></div>
+	<div class="bdr2 menuDiv"><a href="javascript:;" onclick="alert('xixi');">Link 2</a><a href="javascript:;" onclick="alert('hh');"><img class="visibleImg" src="./image/visible.png" title="显示集中器"/></a></div>
+	<div class="bdr2 menuDiv"><a href="javascript:;" onclick="alert('xixi');">Link 3</a><a href="javascript:;" onclick="alert('hh');"><img class="visibleImg" src="./image/visible.png" title="显示集中器"/></a></div>
 </div>
-<script type="text/javascript">
-$(".content2 div").mouseover(function(){
-	$("img", this).show();
-});
-$(".content2 div").mouseout(function(){
-	$("img", this).hide();
-});
-</script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>auto size</title>
+<style>
+.wrapper{
+	display:table;
+	width:100%;
+	height:100%;
+}
+#header{
+	display:table-row;
+	border-style:solid;
+}
+#content{
+	display: table-row;  /* height is dynamic, and will expand... */
+    height: 100%;        /* ...as content is added (won't scroll) */
+    background: turquoise;
+	border-style:solid;
+}
+#footer{
+	display:table-row;
+	border-style:dashed;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<div id="header">header</div>
+	<div id="content"></div>
+	<div id="footer">footer</div>
+</div>
+</body>
+</html>
